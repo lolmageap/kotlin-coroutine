@@ -5,6 +5,6 @@ spring:
   application:
     name: webflux-coroutine
   r2dbc:
-    url: r2dbc:pool:mariadb://localhost:3306
+    url: r2dbc:pool:mariadb://localhost:3306/sample
     username: user
     password: 1234
