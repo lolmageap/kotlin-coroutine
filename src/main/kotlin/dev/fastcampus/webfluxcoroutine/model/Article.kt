@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.annotation.LastModifiedDate
 import java.time.LocalDateTime
 
-class Article(
+class Article (
     @Id
     var id: Long = 0,
     var title: String,

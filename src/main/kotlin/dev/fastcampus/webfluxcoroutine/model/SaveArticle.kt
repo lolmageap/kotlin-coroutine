@@ -2,8 +2,8 @@ package dev.fastcampus.webfluxcoroutine.model
 
 data class CreateArticle(
     val title: String,
-    val body: String?,
-    val authorId: Long?,
+    val body: String? = null,
+    val authorId: Long? = null,
 )
 
 fun CreateArticle.toEntity() : Article =
