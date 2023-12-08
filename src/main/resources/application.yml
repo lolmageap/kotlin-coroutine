@@ -1,5 +1,14 @@
 # 최상단은 Default
 spring:
+  profiles:
+    active: local
+
+---
+
+server:
+  port: 8081
+
+spring:
   output:
     ansi:
       enabled: always
@@ -14,6 +23,28 @@ spring:
     init:
       mode: always
       schema-locations: classpath:db-init/schema.sql
+
+logging:
+  level:
+    dev.fastcampus: debug
+    org.springframework.boot.r2dbc.core: debug
+    org.springframework.boot.r2dbc.init: debug
+  pattern:
+    console: "%d{HH:mm:ss.SSS}|%highlight(%-5level)|%X{txid:-}|%green(%t)|%logger|%blue(\\(%F:%L\\))|%msg%n"
+api:
+  externalUrl: http://localhost:8081
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  r2dbc:
+    url: r2dbc:pool:h2:mem://localhost/sample
+  sql:
+    init:
+      mode: embedded
 
 ---
 
