@@ -42,6 +42,7 @@ dependencies {
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     runtimeOnly("org.mariadb:r2dbc-mariadb")
+    testImplementation("org.mariadb:r2dbc-mariadb")
     runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
