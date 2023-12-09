@@ -41,6 +41,8 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+//    runtimeOnly("com.h2database:h2")
+//    testImplementation("com.h2database:h2")
     runtimeOnly("org.mariadb:r2dbc-mariadb")
     testImplementation("org.mariadb:r2dbc-mariadb")
     runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
