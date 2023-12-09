@@ -1,7 +1,7 @@
 # 최상단은 Default
-spring:
-  profiles:
-    active: local
+#spring:
+#  profiles:
+#    active: local
 
 ---
 
@@ -27,8 +27,8 @@ spring:
 logging:
   level:
     dev.fastcampus: debug
-    org.springframework.boot.r2dbc.core: debug
-    org.springframework.boot.r2dbc.init: debug
+#    org.springframework.boot.r2dbc.core: debug
+#    org.springframework.boot.r2dbc.init: debug
   pattern:
     console: "%d{HH:mm:ss.SSS}|%highlight(%-5level)|%X{txid:-}|%green(%t)|%logger|%blue(\\(%F:%L\\))|%msg%n"
 api:
@@ -36,15 +36,15 @@ api:
 
 ---
 
-spring:
-  config:
-    activate:
-      on-profile: local
-  r2dbc:
-    url: r2dbc:pool:h2:mem://localhost/sample
-  sql:
-    init:
-      mode: embedded
+#spring:
+#  config:
+#    activate:
+#      on-profile: local
+#  r2dbc:
+#    url: r2dbc:pool:h2:mem://localhost/sample
+#  sql:
+#    init:
+#      mode: embedded
 
 ---
 
