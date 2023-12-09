@@ -13,7 +13,7 @@ import java.util.*
 @Order(1)
 class MdcFilter: WebFilter {
     override fun filter(exchange: ServerWebExchange, chain: WebFilterChain): Mono<Void> {
-        val uuid = "${UUID.randomUUID()}"
+        val uuid = exchange.request.headers["x-txid"]?.firstOrNull() ?: "${UUID.randomUUID()}"
         MDC.put("txid", uuid)
         return chain.filter(exchange)
     }
