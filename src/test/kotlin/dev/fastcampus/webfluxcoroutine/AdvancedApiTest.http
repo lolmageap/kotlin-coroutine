@@ -1,4 +1,4 @@
 ### MDC Test
-GET http://localhost:8080/test/mdc
+GET http://localhost:8081/test/mdc
 Content-Type: application/json
 x-txid: test
