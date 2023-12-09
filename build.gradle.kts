@@ -19,6 +19,7 @@ repositories {
 }
 
 dependencies {
+    implementation("io.micrometer:context-propagation:1.0.5")
     implementation("io.github.microutils:kotlin-logging:3.0.5")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.7.2")
