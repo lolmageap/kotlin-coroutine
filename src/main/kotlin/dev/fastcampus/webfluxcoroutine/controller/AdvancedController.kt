@@ -16,16 +16,19 @@ class AdvancedController(
 ) {
     @GetMapping("/test/mdc")
     suspend fun testRequestTxId() {
-//        withContext(MDCContext()) {
         logger.debug { "Hello MDC TxId start" }
-//        delay(100)
         advancedService.mdc()
         logger.debug { "Hello MDC TxId end" }
-//        }
     }
 
     @GetMapping("/test/mdc2")
     fun testAnother() {
         logger.debug { "test another !!" }
+    }
+
+    @GetMapping("/test/error")
+    fun error() {
+        logger.debug { "request error" }
+        throw RuntimeException("yahoo~~")
     }
 }
