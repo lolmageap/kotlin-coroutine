@@ -30,14 +30,17 @@ dependencies {
 
 //	implementation("io.github.numichi:reactive-logger:5.1.4")
 
-    implementation("io.github.resilience4j:resilience4j-kotlin:2.0.0")
-    implementation("io.github.resilience4j:resilience4j-all:2.0.0")
+    implementation("io.github.resilience4j:resilience4j-kotlin:2.1.0")
+    implementation("io.github.resilience4j:resilience4j-all:2.1.0")
 
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
 
     implementation("org.springframework.boot:spring-boot-starter-data-redis-reactive")
+
+    implementation("io.github.resilience4j:resilience4j-all:2.1.0")
+    implementation("io.github.resilience4j:resilience4j-kotlin:2.1.0")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
