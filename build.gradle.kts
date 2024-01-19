@@ -16,6 +16,7 @@ java {
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://repository.apache.org/snapshots") }
 }
 
 dependencies {
