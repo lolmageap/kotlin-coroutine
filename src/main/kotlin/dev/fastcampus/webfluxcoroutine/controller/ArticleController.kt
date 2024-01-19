@@ -2,6 +2,7 @@ package dev.fastcampus.webfluxcoroutine.controller
 
 import dev.fastcampus.webfluxcoroutine.model.Article
 import dev.fastcampus.webfluxcoroutine.model.CreateArticle
+import dev.fastcampus.webfluxcoroutine.model.QueryArticle
 import dev.fastcampus.webfluxcoroutine.model.UpdateArticle
 import dev.fastcampus.webfluxcoroutine.service.ArticleService
 import kotlinx.coroutines.flow.Flow
@@ -29,8 +30,8 @@ class ArticleController(
     }
 
     @GetMapping
-    suspend fun getAll(@RequestParam title: String?): Flow<Article> {
-        return articleService.getAll(title)
+    suspend fun getAll(request: QueryArticle): Flow<Article> {
+        return articleService.getAll(request)
     }
 
     @PostMapping
