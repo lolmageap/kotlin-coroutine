@@ -19,3 +19,13 @@ data class UpdateArticle(
     val authorId: Long?,
 )
 
+data class QueryArticle(
+    val title: String?,
+    val authorId: List<Long>,
+
+//    @DateString
+    val from: String?,
+
+//    @DateString
+    val to: String?,
+)
